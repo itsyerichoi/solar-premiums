@@ -1,9 +1,11 @@
 # Solar Premium Analysis
-Data and code for solar PV premium analysis
+Data and code for solar PV premium analysis. If you have questions or suggestions, please contact Yeri at yerichoi@hanyang.ac.kr/
 
-Replication materials for ...
+## Computational requirement
+- R 4.0+
 
 ## Structure
-- data/: processed datasets
-- scripts/: analysis code
-- figures/: figures used in paper
+- `data/`: processed datasets
+- `code/`: analysis scripts
+- `shp/`: solar PV installation shapefiles
+- `figures/`: figures used in paper
