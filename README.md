@@ -1,5 +1,5 @@
 # Solar Premium Analysis
-Data and code for solar PV premium analysis. If you have questions or suggestions, please contact Yeri at yerichoi@hanyang.ac.kr/
+Data and code for solar PV premium analysis. If you have questions or suggestions, please contact Yeri at yerichoi@hanyang.ac.kr
 
 ## Computational requirement
 - R 4.0+
