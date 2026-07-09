@@ -11,7 +11,6 @@
 ## ---------------------------------------------------------------------------------------------------------------------------------
 ## Fake treatment timing  ->  Table S8
 ## ---------------------------------------------------------------------------------------------------------------------------------
-
 ## Shift treatment timing backward and rebuild event-time windows for the placebo test
 make_fake_timing <- function(df, fake_shift){
   df %>%
@@ -59,7 +58,7 @@ m3.fake <- function(myDF, fake_shift, var1 = "treat_no_reclass", var2 = "treat_y
   )
 }
 
-## Table S9 Mock timing placebo test
+## Table S8 Mock timing placebo test
 m1.fake(appr_n10, fake_shift = -7) %>% summary()
 m2.fake(appr_n10, fake_shift = -7) %>% summary()
 m3.fake(appr_n10, fake_shift = -7) %>% summary()
@@ -67,7 +66,6 @@ m3.fake(appr_n10, fake_shift = -7) %>% summary()
 ## ---------------------------------------------------------------------------------------------------------------------------------
 ## Narrow observation window  ->  Table S9
 ## ---------------------------------------------------------------------------------------------------------------------------------
-
 ## Model 1
 m1.small <- function(myDF){
   results <- feols(log(propertyVal_2000) ~ time+treat+treat:time + area_ha + builtup_km + road_km + powerline_km + soilQlt
@@ -99,14 +97,14 @@ m3.small <- function(myDF, var1 = "treat_no_reclass", var2 = "treat_yes_reclass"
   return(results)
 }
 
-## Table S10, Column (1)
+## Table S9, Column (1)
 m1.small(appr_n10) %>% summary()
 
-## Table S10, Column (2)
+## Table S9, Column (2)
 m2.small(appr_n10) %>% summary()
 m2.small(appr_n10) %>% doZtest_gen()
 
-## Table S10, Column (3)
+## Table S9, Column (3)
 m3.small(appr_n10) %>% summary()
 m3.small(appr_n10) %>% doZtest_lu()
 
@@ -114,7 +112,6 @@ m3.small(appr_n10) %>% doZtest_lu()
 ## Placebo treatment group  ->  Fig. S4
 ## ---------------------------------------------------------------------------------------------------------------------------------
 set.seed(123)
-
 # ── Core placebo simulation function ──────────────────────────
 run_placebo <- function(df, n_iter = 10, model_type = c("m1", "m2", "m3")) {
   model_type  <- match.arg(model_type)
@@ -311,29 +308,28 @@ row3 <- plot_placebo_m3(res_m3_appr, real_m3_appr_no, real_m3_appr_yes) +
 ## Various control group sizes  ->  Table S10
 ## Uses m1 / m2 / m3 / doZtest_gen / doZtest_lu defined in 01_main_did.R
 ## ---------------------------------------------------------------------------------------------------------------------------------
-
-## Table S11 Column (1): n5
+## Table S10 Column (1): n5
 m1(appr_n5) %>% summary()
 m2(appr_n5) %>% summary()
 m2(appr_n5) %>% doZtest_gen()
 m3(appr_n5) %>% summary()
 m3(appr_n5) %>% summary() %>% doZtest_lu()
 
-## Table S11 Column (2): n10
+## Table S10 Column (2): n10
 m1(appr_n10) %>% summary()
 m2(appr_n10) %>% summary()
 m2(appr_n10) %>% doZtest_gen()
 m3(appr_n10) %>% summary()
 m3(appr_n10) %>% summary() %>% doZtest_lu()
 
-## Table S11 Column (3): n15
+## Table S10 Column (3): n15
 m1(appr_n15) %>% summary()
 m2(appr_n15) %>% summary()
 m2(appr_n15) %>% doZtest_gen()
 m3(appr_n15) %>% summary()
 m3(appr_n15) %>% summary() %>% doZtest_lu()
 
-## Table S11 Column (4): n30
+## Table S10 Column (4): n30
 m1(appr_n30) %>% summary()
 m2(appr_n30) %>% summary()
 m2(appr_n30) %>% doZtest_gen()
@@ -352,7 +348,7 @@ m1.fe <- function(myDF){
                      filter(yrDif >= -10 & yrDif <= 5))
   return(results)
 }
-## Table S12 Column (1)
+## Table S11 Column (1)
 m1.fe(appr_n10) %>% summary()
 
 ## Model 2
