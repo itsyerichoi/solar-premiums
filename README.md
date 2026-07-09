@@ -1,17 +1,9 @@
 # Solar Premium Analysis
+Replication code and data for **"Solar Premiums Driven by Both Energy Income and Development Potential"**.
 Data and code for solar PV premium analysis. If you have questions or suggestions, please contact Yeri at yerichoi@hanyang.ac.kr
 
 ## Computational requirement
 - R 4.0+
-
-## Structure
-- `data/`: processed datasets
-- `code/`: analysis scripts
-- `shp/`: solar PV installation shapefiles
-- `figures/`: figures used in paper
-# solar-premiums
-
-Replication code and data for **"Solar Premiums Driven by Both Energy Income and Development Potential"**.
 
 ## Structure
 
