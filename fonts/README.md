@@ -1,1 +1,0 @@
-Place DejaVuSans.ttf here.
