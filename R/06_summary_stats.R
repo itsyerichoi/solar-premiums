@@ -6,7 +6,6 @@
 ## Table S15 Summary statistics of parcel characteristics
 ## Requires: 00_setup.R, 01_main_did.R, 02_heterogeneity.R (uses appr_n10 with treat_no_jimok/treat_yes_jimok)
 ## =================================================================================================================================
-
 summary_stats <- function(df, model_type = c("m1", "m2", "m3")) {
   model_type <- match.arg(model_type)
 
