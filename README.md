@@ -20,7 +20,6 @@ solar-premiums/
 │   ├── 05_robustness.R       Tables S8-S11, Fig. S4: placebo timing, narrow window, placebo group,
 │   │                         control group sizes, parcel fixed effects
 │   └── 06_summary_stats.R    Tables S12-S15: descriptive statistics
-├── shp/                      solar PV shapefiles
 └── solar-premiums.Rproj
 ```
 
